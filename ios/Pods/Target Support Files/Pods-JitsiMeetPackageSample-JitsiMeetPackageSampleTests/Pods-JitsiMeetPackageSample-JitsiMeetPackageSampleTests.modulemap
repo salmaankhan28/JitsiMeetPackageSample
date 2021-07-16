@@ -1,0 +1,6 @@
+module Pods_JitsiMeetPackageSample_JitsiMeetPackageSampleTests {
+  umbrella header "Pods-JitsiMeetPackageSample-JitsiMeetPackageSampleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
