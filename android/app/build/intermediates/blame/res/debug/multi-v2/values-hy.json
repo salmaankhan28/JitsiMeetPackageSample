@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/ridaahmed/Documents/JitsiMeetPackageSample/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hy/values-hy.xml",
+            "outputFile": "/Users/rida/Documents/JitsiMeetPackageSample/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hy/values-hy.xml",
             "map": [
                 {
-                    "source": "/Users/ridaahmed/.gradle/caches/transforms-2/files-2.1/680f99f5a60980a4fb7a012e32eff12d/appcompat-1.1.0/res/values-hy/values-hy.xml",
+                    "source": "/Users/rida/.gradle/caches/transforms-2/files-2.1/680f99f5a60980a4fb7a012e32eff12d/appcompat-1.1.0/res/values-hy/values-hy.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/Users/ridaahmed/.gradle/caches/transforms-2/files-2.1/2052548aab74f7088a78a1798b9d4739/play-services-base-17.0.0/res/values-hy/values.xml",
+                    "source": "/Users/rida/.gradle/caches/transforms-2/files-2.1/2052548aab74f7088a78a1798b9d4739/play-services-base-17.0.0/res/values-hy/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/Users/ridaahmed/.gradle/caches/transforms-2/files-2.1/279bc74db9b954054f3868467d9b3ad5/jetified-play-services-basement-17.0.0/res/values-hy/values.xml",
+                    "source": "/Users/rida/.gradle/caches/transforms-2/files-2.1/279bc74db9b954054f3868467d9b3ad5/jetified-play-services-basement-17.0.0/res/values-hy/values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -55,7 +55,7 @@
                     }
                 },
                 {
-                    "source": "/Users/ridaahmed/.gradle/caches/transforms-2/files-2.1/db66a303bf26c4c9c9ee589a595c808c/core-1.1.0/res/values-hy/values-hy.xml",
+                    "source": "/Users/rida/.gradle/caches/transforms-2/files-2.1/db66a303bf26c4c9c9ee589a595c808c/core-1.1.0/res/values-hy/values-hy.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
