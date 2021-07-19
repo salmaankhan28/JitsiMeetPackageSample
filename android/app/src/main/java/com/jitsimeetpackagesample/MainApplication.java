@@ -5,6 +5,8 @@ import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
 import com.reactnativejitsimeet.RNJitsiMeetPackage;
+import com.ocetnik.timer.BackgroundTimerPackage;
+import com.reactnativejitsimeet.RNJitsiMeetPackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -32,13 +34,13 @@ public class MainApplication extends Application implements ReactApplication {
         }
 
         @Override
-        protected String getJSMainModuleName() {
-          return "index";
+        protected @Nullable String getBundleAssetName() {
+          return "app.bundle";
         }
 
         @Override
-        protected @Nullable String getBundleAssetName() {
-          return "app.bundle";
+        protected String getJSMainModuleName() {
+          return "index";
         }
       };
 

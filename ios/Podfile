@@ -79,6 +79,8 @@ target 'JitsiMeetPackageSample' do
 
   pod 'react-native-jitsi-meet', :path => '../node_modules/react-native-jitsi-meet'
 
+  pod 'react-native-background-timer', :path => '../node_modules/react-native-background-timer'
+
   target 'JitsiMeetPackageSampleTests' do
     inherit! :complete
     # Pods for testing

@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React, { useState } from 'react';
+import React from 'react';
 
 import {
   SafeAreaView,
@@ -19,16 +19,19 @@ import {
 } from 'react-native';
 
 import {
-  Header,
-  LearnMoreLinks,
   Colors,
-  DebugInstructions,
-  ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import JitsiView from './JitsiView';
 
-const App: () => React$Node = () => {
-  const [joined, setJoinMeeting] = useState(false);
+class App extends React.Component {
+constructor(props) {
+  super(props);
+  this.state={
+    joined : false
+  }
+}
+  render(){
+    const {joined} = this.state;
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -43,7 +46,7 @@ const App: () => React$Node = () => {
                 :
                 <TouchableOpacity
                   onPress={() => {
-                    setJoinMeeting(true);
+                    this.setState({joined : true});
                   }}
                 >
                   <Text style={styles.sectionDescription}>
@@ -56,6 +59,7 @@ const App: () => React$Node = () => {
       </SafeAreaView>
     </>
   );
+}
 };
 
 const styles = StyleSheet.create({
