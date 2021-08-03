@@ -42,7 +42,6 @@ export default class JitsiView extends React.Component {
     if (this.jitsiTimeout) {
       BackgroundTimer.clearInterval(this.jitsiTimeout);
     }
-    navigation.pop();
   }
 
   render() {
