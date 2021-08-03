@@ -1,6 +1,4 @@
 # Add project specific ProGuard rules here.
-# By default, the flags in this file are appended to flags specified
-# in /usr/local/Cellar/android-sdk/24.3.3/tools/proguard/proguard-android.txt
 # You can edit the include path and order by changing the proguardFiles
 # directive in build.gradle.
 #
@@ -63,7 +61,6 @@
 
 # Jisti Meet SDK
 
--keep class org.jitsi.meet.** { *; }
 -keep class org.jitsi.meet.sdk.** { *; }
 
 # We added the following when we switched minifyEnabled on. Probably because we
@@ -86,3 +83,9 @@
 
 # Rule to avoid build errors related to SVGs.
 -keep public class com.horcrux.svg.** {*;}
+
+# Hermes
+-keep class com.facebook.hermes.unicode.** { *; }
+
+# This app
+-keep class net.jitsi.sdktest.** { *; }
