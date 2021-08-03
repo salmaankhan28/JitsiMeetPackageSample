@@ -15,7 +15,8 @@ import {
   View,
   Text,
   StatusBar,
-  TouchableOpacity
+  TouchableOpacity,
+  NativeModules
 } from 'react-native';
 
 import {
@@ -31,7 +32,7 @@ constructor(props) {
   }
 }
   render(){
-    const {joined} = this.state;
+    // const {joined} = this.state;
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -40,20 +41,17 @@ constructor(props) {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.body}>
-            {
-              joined ?
-                <JitsiView />
-                :
                 <TouchableOpacity
                   onPress={() => {
-                    this.setState({joined : true});
+                    // this.setState({joined : true});
+                    NativeModules.ActivityStarter.navigateToExample('https://meet.jit.si')
                   }}
+                  
                 >
                   <Text style={styles.sectionDescription}>
                     Join Meeting
              </Text>
                 </TouchableOpacity>
-            }
           </View>
         </ScrollView>
       </SafeAreaView>

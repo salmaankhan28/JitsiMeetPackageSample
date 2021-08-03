@@ -14,12 +14,6 @@ import java.util.List;
 import androidx.annotation.Nullable;
 import android.util.Log;
 
-import org.jitsi.meet.sdk.JitsiMeetActivity;
-import org.jitsi.meet.sdk.JitsiMeetConferenceOptions;
-import org.jitsi.meet.sdk.JitsiMeet;
-
-import java.net.MalformedURLException;
-import java.net.URL;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -36,6 +30,7 @@ public class MainApplication extends Application implements ReactApplication {
           List<ReactPackage> packages = new PackageList(this).getPackages();
           // Packages that cannot be autolinked yet can be added manually here, for example:
           // packages.add(new MyReactNativePackage());
+          packages.add(new ActivityStarterReactPackage());
           return packages;
         }
 
@@ -58,26 +53,6 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
         super.onCreate();
-        // setContentView(R.layout.jitsi_meet_view);
-
-       // Initialize default options for Jitsi Meet conferences.
-        URL serverURL;
-        try {
-            serverURL = new URL("https://meet.jit.si");
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-            throw new RuntimeException("Invalid server URL!");
-        }
-        Log.d("JITSI CLIENT", "JITSI CLIENT: URL WORKED");
-
-        JitsiMeetConferenceOptions defaultOptions
-                = new JitsiMeetConferenceOptions.Builder()
-                .setServerURL(serverURL)
-                .setWelcomePageEnabled(false)
-                .build();
-        JitsiMeet.setDefaultConferenceOptions(defaultOptions);
-        Log.d("JITSI CLIENT", "JITSI CLIENT: GOT TO END OF ON CREATE");
-
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }
