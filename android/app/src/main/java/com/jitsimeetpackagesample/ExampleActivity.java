@@ -34,20 +34,8 @@ public class ExampleActivity extends AppCompatActivity {
 
         JitsiMeetConferenceOptions defaultOptions
                 = new JitsiMeetConferenceOptions.Builder()
-
-                // When using JaaS, set the obtained JWT here
-                //.setToken("MyJWT")
-                // Different features flags can be set
-                //.setFeatureFlag("toolbox.enabled", false)
-                //.setFeatureFlag("filmstrip.enabled", false)
-                
-                // .setAudioMuted(false)
-                // .setVideoMuted(false)
-                // .setAudioOnly(false)
                 .setWelcomePageEnabled(true)
                 .setServerURL(serverURL)
-                .setFeatureFlag("call-integration.enabled", false)
-                .setFeatureFlag("resolution", 360)
                 .build();
         JitsiMeet.setDefaultConferenceOptions(defaultOptions);
         Log.d("JITSI CLIENT", "JITSI CLIENT: GOT TO END OF ON CREATE");
@@ -66,9 +54,6 @@ public class ExampleActivity extends AppCompatActivity {
             // one we set earlier and this one when joining.
             JitsiMeetConferenceOptions options
                     = new JitsiMeetConferenceOptions.Builder()
-                // When using JaaS, set the obtained JWT here
-                // .setToken("eyJraWQiOiJ2cGFhcy1tYWdpYy1jb29raWUtOTNkZjlmNjAwMTE4NDIyMmI4YWFkMGY4ZGM2ODg2MjcvMDBiOWM4LVNBTVBMRV9BUFAiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJqaXRzaSIsImV4cCI6MTYyODAwMjY0MSwibmJmIjoxNjI3OTk1NDM2LCJpc3MiOiJjaGF0Iiwicm9vbSI6IioiLCJzdWIiOiJ2cGFhcy1tYWdpYy1jb29raWUtOTNkZjlmNjAwMTE4NDIyMmI4YWFkMGY4ZGM2ODg2MjciLCJjb250ZXh0Ijp7ImZlYXR1cmVzIjp7ImxpdmVzdHJlYW1pbmciOmZhbHNlLCJvdXRib3VuZC1jYWxsIjpmYWxzZSwic2lwLW91dGJvdW5kLWNhbGwiOmZhbHNlLCJ0cmFuc2NyaXB0aW9uIjpmYWxzZSwicmVjb3JkaW5nIjpmYWxzZX0sInVzZXIiOnsibW9kZXJhdG9yIjp0cnVlLCJuYW1lIjoiVGVzdCBVc2VyIiwiaWQiOiJhdXRoMHw1ZmIyNDdhZGQ2ZmNiMzAwNzE3NDFkOTciLCJhdmF0YXIiOiIiLCJlbWFpbCI6InRlc3QudXNlckBjb21wYW55LmNvbSJ9fX0.rvua4B7NJEMqIiTPAnTxJqC59hfiSyUpD6FLJRM8tGW55myxwYb044Bw9l5tuH3CybyE8bL4He8a9NFJ4E4W84Ev-YEIwjg3Fsd5nEbbsDep1a3yRtuI527mPzsBV54dd2hawYc8JXE3BV7tegJz5hl8_3qxxWRq98K-hAPzfmRRHaws_cVPVIi1nCB6G8gyNdSPLM9YoPZOoDHBYLm9ELiu5jJBWbT1ulnZO6sIQ5LmHEa9pb7OfHN-PzDmZIJ1-wagjypBqjY7GQJAEzhBOYJlt_vg2MfinGvuT2kiUOE-01SXfn4_k2inj2ABGIg-Wr4O_VyWxtwztjXgFLlvNQ")
-                // .setRoom("vpaas-magic-cookie-93df9f6001184222b8aad0f8dc688627/test")
                 .setRoom(text)
                     .build();
             // Launch the new activity with the given options. The launch() method takes care
