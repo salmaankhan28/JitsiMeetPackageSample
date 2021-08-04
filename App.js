@@ -21,17 +21,13 @@ import {
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
-import JitsiView from './JitsiView';
+
 
 class App extends React.Component {
 constructor(props) {
   super(props);
-  this.state={
-    joined : false
-  }
 }
   render(){
-    const {joined} = this.state;
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -40,20 +36,9 @@ constructor(props) {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.body}>
-            {
-              joined ?
-                <JitsiView />
-                :
-                <TouchableOpacity
-                  onPress={() => {
-                    this.setState({joined : true});
-                  }}
-                >
                   <Text style={styles.sectionDescription}>
-                    Join Meeting
+                    "Simple React Native App (v-0.62)"
              </Text>
-                </TouchableOpacity>
-            }
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -66,10 +51,6 @@ const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: Colors.lighter,
   },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
   body: {
     backgroundColor: Colors.white,
     height: 600
@@ -77,18 +58,10 @@ const styles = StyleSheet.create({
   sectionDescription: {
     marginTop: 30,
     alignSelf: 'center',
-    fontSize: 18,
-    fontWeight: '400',
+    fontSize: 22,
+    fontWeight: 'bold',
     color: Colors.dark,
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
+  }
 });
 
 export default App;
