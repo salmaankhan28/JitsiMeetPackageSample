@@ -77,8 +77,6 @@ target 'JitsiMeetPackageSample' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'react-native-jitsi-meet', :path => '../node_modules/react-native-jitsi-meet'
-
   pod 'react-native-background-timer', :path => '../node_modules/react-native-background-timer'
 
   target 'JitsiMeetPackageSampleTests' do
