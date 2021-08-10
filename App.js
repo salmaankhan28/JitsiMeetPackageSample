@@ -15,7 +15,8 @@ import {
   View,
   Text,
   StatusBar,
-  TouchableOpacity
+  TouchableOpacity,
+  NativeModules
 } from 'react-native';
 
 import {
@@ -28,6 +29,7 @@ constructor(props) {
   super(props);
 }
   render(){
+    // const {joined} = this.state;
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -36,9 +38,17 @@ constructor(props) {
           contentInsetAdjustmentBehavior="automatic"
           style={styles.scrollView}>
           <View style={styles.body}>
+                <TouchableOpacity
+                  onPress={() => {
+                    // this.setState({joined : true});
+                    NativeModules.ActivityStarter.navigateToExample('https://meet.jit.si')
+                  }}
+                  
+                >
                   <Text style={styles.sectionDescription}>
                     "Simple React Native App (v-0.62)"
              </Text>
+                </TouchableOpacity>
           </View>
         </ScrollView>
       </SafeAreaView>
