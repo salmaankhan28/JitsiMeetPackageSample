@@ -22,14 +22,11 @@ import {
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
-import JitsiView from './JitsiView';
+
 
 class App extends React.Component {
 constructor(props) {
   super(props);
-  this.state={
-    joined : false
-  }
 }
   render(){
     // const {joined} = this.state;
@@ -49,7 +46,7 @@ constructor(props) {
                   
                 >
                   <Text style={styles.sectionDescription}>
-                    Join Meeting
+                    "Simple React Native App (v-0.62)"
              </Text>
                 </TouchableOpacity>
           </View>
@@ -71,8 +68,8 @@ const styles = StyleSheet.create({
   sectionDescription: {
     marginTop: 30,
     alignSelf: 'center',
-    fontSize: 18,
-    fontWeight: '400',
+    fontSize: 22,
+    fontWeight: 'bold',
     color: Colors.dark,
   }
 });
