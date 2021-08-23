@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React from "react";
 
 import {
   SafeAreaView,
@@ -16,46 +16,60 @@ import {
   Text,
   StatusBar,
   TouchableOpacity,
-  NativeModules
-} from 'react-native';
+  NativeModules,
+  Button,
+} from "react-native";
+import { Colors } from "react-native/Libraries/NewAppScreen";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { WebView } from 'react-native-webview';
 
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
-
-
-class App extends React.Component {
-constructor(props) {
-  super(props);
-}
-  render(){
-    // const {joined} = this.state;
+function HomeScreen({ navigation }) {
   return (
-    <>
+    <View>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <ScrollView
           contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
+          style={styles.scrollView}
+        >
           <View style={styles.body}>
-                <TouchableOpacity
-                  onPress={() => {
-                    // this.setState({joined : true});
-                    NativeModules.ActivityStarter.navigateToExample('https://meet.jit.si')
-                  }}
-                  
-                >
-                  <Text style={styles.sectionDescription}>
-                    "Simple React Native App (v-0.62)"
-             </Text>
-                </TouchableOpacity>
+            <Button
+              title="Join Video Call"
+              onPress={() => {
+                // this.setState({joined : true});
+                NativeModules.ActivityStarter.navigateToExample(
+                  "https://meet.jit.si"
+                );
+              }}
+            ></Button>
+            <Button
+              title="Go to Details"
+              onPress={() => navigation.navigate("Details")}
+            />
           </View>
         </ScrollView>
       </SafeAreaView>
-    </>
+    </View>
   );
 }
-};
+
+function DetailsScreen({ navigation }) {
+  return <WebView source={{ uri: "https://reactnative.dev/" }} />;
+}
+
+const Stack = createNativeStackNavigator();
+
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="Details" component={DetailsScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+}
 
 const styles = StyleSheet.create({
   scrollView: {
@@ -63,15 +77,15 @@ const styles = StyleSheet.create({
   },
   body: {
     backgroundColor: Colors.white,
-    height: 600
+    height: 600,
   },
   sectionDescription: {
     marginTop: 30,
-    alignSelf: 'center',
+    alignSelf: "center",
     fontSize: 22,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     color: Colors.dark,
-  }
+  },
 });
 
 export default App;
